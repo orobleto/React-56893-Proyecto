@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import '../recursos/CSS/tarjeta.css';
+import '../recursos/CSS/boton.css';
 
 
 class Usuario extends Component {
@@ -17,15 +19,17 @@ class Usuario extends Component {
 
     render() {
         return (
-            <div>
-                <div>
-                    <h3>Parte Frontal</h3>
-                    <img src="" />
+            <div className="card">
+                <div className="card-side front" >
+                    <h3>{this.state.email}</h3>
+                    <img className="card-image" src={this.state.avatar} />
                 </div>
-
-                <div>
-                    <h3>Parte Trasera</h3>
-                    <button>Mostrar Nombre</button>
+                <div className="card-side back" >
+                    <h3>{this.state.mostrarNombre ? this.state.first_name : this.state.last_name}</h3>
+                    <br/><br/><br/>
+                    <button className="button-swing"
+                        onClick={() => this.setState({ mostrarNombre: !this.state.mostrarNombre })}
+                    >Mostrar {this.state.mostrarNombre ? "Apellido" : "Nombre"}</button>
                 </div>
             </div>);
     }
