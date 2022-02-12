@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Usuario from "./Componente/Usuario";
 
 class App extends Component {
     constructor(props) {
@@ -9,7 +10,15 @@ class App extends Component {
     }
 
     render() {
-        return (<div>APP</div>);
+        return (
+            <div>
+                <Usuario
+                    id="1"
+                    firs_name="Octavio"
+                    last_name="Robleto"
+                    email="octavio.robleto@gmail.com"
+                />
+            </div>);
     }
 
 }
