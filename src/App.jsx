@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Formulario from "./Componente/Formulario";
 import Usuario from "./Componente/Usuario";
 
 class App extends Component {
@@ -28,6 +29,8 @@ class App extends Component {
     render() {
         return (
             <div>
+                <Formulario/>
+
                 {
                     this.state.usuarios.map((e) =>
                     (
