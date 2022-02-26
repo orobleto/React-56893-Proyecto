@@ -27,9 +27,9 @@ export default class Formulario extends Component {
         this.setState({ [event.target.name]: event.target.value });
     }
 
-    InsertarValores=(event)=>{
+    InsertarValores = (event) => {
         event.preventDefault();
-
+        this.props.funcionAgregar(this.state.first_name, this.state.last_name, this.state.email);
         this.LimpiarFormulario();
     }
 
@@ -59,7 +59,7 @@ export default class Formulario extends Component {
                     type="email"
                     name="email"
                     required={true}
-                    placeholder="Nombre"
+                    placeholder="Correo Electronico"
                     value={this.state.email}
                     onChange={this.AsignarValores}
                 />
